@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SRISHANTH DASARI // Creative Developer &amp; Visual Engineer</title>
+  <meta name="description" content="Cinematic portfolio of SRISHANTH DASARI, a Creative Developer specializing in high-end web experiences, interactive 3D, and visual engineering." />
+
+  <!-- Google Fonts: Manrope, Inter, Cormorant Garamond, JetBrains Mono, Oswald -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;600;700&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    (() => {
+      try {
+        if (localStorage.getItem('portfolio-color-mode') === 'dark') {
+          document.documentElement.dataset.colorMode = 'dark';
+        }
+      } catch {}
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-theme="hero">
+
+  <!-- =================================================================== -->
+  <!-- ACCESSIBILITY: SKIP TO CONTENT                                      -->
+  <!-- =================================================================== -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- =================================================================== -->
+  <!-- CUSTOM CURSOR (Desktop Only)                                        -->
+  <!-- =================================================================== -->
+  <div id="custom-cursor" class="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-follower"></div>
+    <span class="cursor-text">VIEW</span>
+  </div>
+
+  <!-- =================================================================== -->
+  <!-- INTRO SEQUENCE OVERLAY                                              -->
+  <!-- =================================================================== -->
+  <div id="intro-overlay" class="intro-overlay" aria-hidden="true">
+    <video id="intro-video" class="intro-video" autoplay muted playsinline preload="auto" aria-hidden="true">
+      <source src="intro-video.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <!-- =================================================================== -->
+  <!-- MULTI-LAYERED BACKGROUND ATMOSPHERE                                 -->
+  <!-- =================================================================== -->
+  <div class="background-container" aria-hidden="true">
+    <canvas id="bg-canvas"></canvas>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+    <div class="bg-grid"></div>
+    <div class="film-grain"></div>
+    <div class="mouse-glow" id="mouse-glow"></div>
+  </div>
+
+  <!-- =================================================================== -->
+  <!-- FLOATING NAVIGATION                                                 -->
+  <!-- =================================================================== -->
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="#hero" class="nav-logo" data-magnetic>
+        <span class="logo-text">DS<span class="logo-dot">.</span></span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#hero" class="nav-link active" data-magnetic><span class="nav-num">01</span>HOME</a>
+        <a href="#about" class="nav-link" data-magnetic><span class="nav-num">02</span>ABOUT</a>
+        <a href="#skills" class="nav-link" data-magnetic><span class="nav-num">03</span>SKILLS</a>
+        <a href="#projects" class="nav-link" data-magnetic><span class="nav-num">04</span>PROJECTS</a>
+        <a href="#experience" class="nav-link" data-magnetic><span class="nav-num">05</span>EXPERIENCE</a>
+        <a href="#contact" class="nav-link" data-magnetic><span class="nav-num">06</span>CONTACT</a>
+      </div>
+
+      <button class="theme-toggle" type="button" aria-label="Dark theme" aria-pressed="false" title="Switch to dark theme">
+        <span class="theme-icon" aria-hidden="true">☾</span>
+      </button>
+
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MOBILE NAVIGATION OVERLAY -->
+  <div class="mobile-nav-overlay" aria-hidden="true">
+    <div class="mobile-nav-links">
+      <a href="#hero" class="mobile-link"><span class="nav-num">01</span>HOME</a>
+      <a href="#about" class="mobile-link"><span class="nav-num">02</span>ABOUT</a>
+      <a href="#skills" class="mobile-link"><span class="nav-num">03</span>SKILLS</a>
+      <a href="#projects" class="mobile-link"><span class="nav-num">04</span>PROJECTS</a>
+      <a href="#experience" class="mobile-link"><span class="nav-num">05</span>EXPERIENCE</a>
+      <a href="#contact" class="mobile-link"><span class="nav-num">06</span>CONTACT</a>
+    </div>
+  </div>
+
+  <!-- =================================================================== -->
+  <!-- MAIN CONTENT AREA                                                   -->
+  <!-- =================================================================== -->
+  <main id="main-content">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section" data-theme="hero">
+      <div class="section-wrapper hero-wrapper">
+        <div class="hero-header">
+          <span class="tech-badge mono-label">[ CREATIVE DEVELOPER &amp; VISUAL ENGINEER ]</span>
+          <span class="tech-coords mono-label">37.7749° N, 122.4194° W</span>
+        </div>
+
+        <div class="hero-headline">
+          <div class="headline-line mask-reveal">
+            <span class="sub-greeting">HELLO, I'm SRISHANTH DASARI</span>
+          </div>
+          <div class="headline-line mask-reveal">
+            <h1 class="display-title hero-title">
+              <span class="gradient-text glow-text">THE SITE</span>
+              <br />
+              <span class="serif-text italic-text">CREATOR.</span>
+            </h1>
+          </div>
+          <div class="headline-line mask-reveal">
+            <p class="hero-subtitle">
+              Building high-impact digital experiences, immersive visual systems, and futuristic interactive art for global brands.
+            </p>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary" data-magnetic>
+            <span class="btn-text">EXPLORE WORK</span>
+            <span class="btn-glow"></span>
+            <span class="btn-icon">→</span>
+          </a>
+          <a href="#contact" class="btn btn-secondary" data-magnetic>
+            <span class="btn-text">LET'S CONNECT</span>
+            <span class="btn-glow"></span>
+          </a>
+        </div>
+
+        <div class="hero-scroll-indicator">
+          <span class="mono-label">SCROLL TO EXPLORE</span>
+          <div class="scroll-line">
+            <div class="scroll-dot"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section" data-theme="about">
+      <div class="section-wrapper">
+        <div class="section-header">
+          <span class="section-num mono-label">01 // STORY</span>
+          <h2 class="section-title condensed-title">ABOUT THE CRAFT</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-narrative">
+            <p class="large-body">
+              I operate at the intersection of <span class="serif-text italic-text highlight-text">rigorous frontend engineering</span> and hyper-sensory visual design.
+            </p>
+            <p class="standard-body">
+              With over 4 years of experience crafting interactive ecosystems, I treat every project as a cinematic release. By combining clean modular software architecture with advanced WebGL graphics, custom animation engines, and meticulous typography, I transform static interfaces into living digital atmospheres.
+            </p>
+            <div class="quote-block">
+              <blockquote class="serif-text">
+                "Code is the invisible geometry that brings digital art into real-time reality."
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="about-metrics">
+            <div class="metric-card glass-panel" data-tilt>
+              <span class="metric-number condensed-title gradient-text-about" data-target="04">00</span>
+              <span class="metric-plus">+</span>
+              <span class="metric-label mono-label">YEARS EXPERIENCE</span>
+            </div>
+
+            <div class="metric-card glass-panel" data-tilt>
+              <span class="metric-number condensed-title gradient-text-about" data-target="28">00</span>
+              <span class="metric-plus">+</span>
+              <span class="metric-label mono-label">PROJECTS DELIVERED</span>
+            </div>
+
+            <div class="metric-card glass-panel" data-tilt>
+              <span class="metric-number condensed-title gradient-text-about" data-target="14">00</span>
+              <span class="metric-plus">+</span>
+              <span class="metric-label mono-label">AWARDS &amp; HONORS</span>
+            </div>
+
+            <div class="metric-card glass-panel" data-tilt>
+              <span class="metric-number condensed-title gradient-text-about" data-target="100">00</span>
+              <span class="metric-plus">%</span>
+              <span class="metric-label mono-label">COMMITMENT TO QUALITY</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills-section" data-theme="skills">
+      <div class="section-wrapper">
+        <div class="section-header">
+          <span class="section-num mono-label">02 // CAPABILITIES</span>
+          <h2 class="section-title display-font">INTERACTIVE <span class="serif-text italic-text">SKILL MATRIX</span></h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card glass-panel" data-accent="orange" data-tilt>
+            <div class="skill-header">
+              <span class="skill-icon">HTML</span>
+              <span class="skill-id mono-label">SKILL_01</span>
+            </div>
+            <h3 class="skill-name display-font">HTML5 &amp; Semantic Web</h3>
+            <p class="skill-desc">Accessible DOM architecture, microdata structure, performance optimization, and ultra-clean markups.</p>
+            <div class="skill-tag mono-label">CORE ARCHITECTURE</div>
+          </div>
+
+          <div class="skill-card glass-panel" data-accent="blue" data-tilt>
+            <div class="skill-header">
+              <span class="skill-icon">CSS</span>
+              <span class="skill-id mono-label">SKILL_02</span>
+            </div>
+            <h3 class="skill-name display-font">Advanced CSS3 / Graphics</h3>
+            <p class="skill-desc">Hardware-accelerated CSS animations, responsive layouts, custom design tokens, and fluid typography systems.</p>
+            <div class="skill-tag mono-label">VISUAL STYLING</div>
+          </div>
+
+          <div class="skill-card glass-panel" data-accent="yellow" data-tilt>
+            <div class="skill-header">
+              <span class="skill-icon">JS</span>
+              <span class="skill-id mono-label">SKILL_03</span>
+            </div>
+            <h3 class="skill-name display-font">Vanilla JavaScript (ES6+)</h3>
+            <p class="skill-desc">High-performance custom logic, asynchronous modules, canvas manipulators, and memory-safe animation loops.</p>
+            <div class="skill-tag mono-label">ENGINE &amp; LOGIC</div>
+          </div>
+
+          <div class="skill-card glass-panel" data-accent="cyan" data-tilt>
+            <div class="skill-header">
+              <span class="skill-icon">RCT</span>
+              <span class="skill-id mono-label">SKILL_04</span>
+            </div>
+            <h3 class="skill-name display-font">React &amp; Modern Frameworks</h3>
+            <p class="skill-desc">Component-driven engineering, state management orchestration, virtual DOM tuning, and scalable architecture.</p>
+            <div class="skill-tag mono-label">APPLICATION DEPLOYMENT</div>
+          </div>
+
+          <div class="skill-card glass-panel" data-accent="purple" data-tilt>
+            <div class="skill-header">
+              <span class="skill-icon">GL</span>
+              <span class="skill-id mono-label">SKILL_05</span>
+            </div>
+            <h3 class="skill-name display-font">WebGL &amp; Shader Art</h3>
+            <p class="skill-desc">Interactive GLSL shaders, 3D particle physics, procedural noise generators, and GPU computing routines.</p>
+            <div class="skill-tag mono-label">GRAPHICS PIPELINE</div>
+          </div>
+
+          <div class="skill-card glass-panel" data-accent="emerald" data-tilt>
+            <div class="skill-header">
+              <span class="skill-icon">UX</span>
+              <span class="skill-id mono-label">SKILL_06</span>
+            </div>
+            <h3 class="skill-name display-font">UI/UX &amp; Motion Design</h3>
+            <p class="skill-desc">Figma prototyping, micro-interaction design, keyframe animation, and human-centric spatial experience design.</p>
+            <div class="skill-tag mono-label">USER EXPERIENCE</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects-section" data-theme="projects">
+      <div class="section-wrapper">
+        <div class="section-header">
+          <span class="section-num mono-label">03 // SELECTED WORKS</span>
+          <h2 class="section-title condensed-title">FEATURED <span class="serif-text italic-text">CREATIONS</span></h2>
+        </div>
+
+        <div class="projects-list">
+
+          <!-- PROJECT 01 -->
+          <article class="project-card glass-panel" data-project-id="p1" data-accent="blue-cyan" data-cursor="VIEW">
+            <div class="project-media">
+              <div class="project-image-placeholder p1-bg"></div>
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project-content">
+              <div class="project-top">
+                <span class="project-number condensed-title">01</span>
+                <span class="project-category mono-label">[ WEBGL / INTERACTIVE ]</span>
+              </div>
+              <h3 class="project-title display-font">NEBULA SYNAPSE 3D</h3>
+              <p class="project-excerpt">An immersive browser-based 3D particle synthesizer that transforms audio frequencies into dynamic cosmic nebulas.</p>
+              <div class="project-tech-stack mono-label">
+                <span>WebGL</span>
+                <span>Three.js</span>
+                <span>Web Audio API</span>
+                <span>GLSL</span>
+              </div>
+              <div class="project-action">
+                <button class="btn-link" data-open-modal="p1">
+                  <span>EXPLORE PROJECT</span>
+                  <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 02 -->
+          <article class="project-card glass-panel" data-project-id="p2" data-accent="purple-magenta" data-cursor="VIEW">
+            <div class="project-media">
+              <div class="project-image-placeholder p2-bg"></div>
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project-content">
+              <div class="project-top">
+                <span class="project-number condensed-title">02</span>
+                <span class="project-category mono-label">[ E-COMMERCE / CINEMATIC ]</span>
+              </div>
+              <h3 class="project-title display-font">AETHER CHRONO LABS</h3>
+              <p class="project-excerpt">A luxury horology showcase built with real-time raytraced product models and fluid page transition choreography.</p>
+              <div class="project-tech-stack mono-label">
+                <span>JavaScript</span>
+                <span>GSAP</span>
+                <span>CSS 3D</span>
+                <span>Shopify API</span>
+              </div>
+              <div class="project-action">
+                <button class="btn-link" data-open-modal="p2">
+                  <span>EXPLORE PROJECT</span>
+                  <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 03 -->
+          <article class="project-card glass-panel" data-project-id="p3" data-accent="orange-red" data-cursor="VIEW">
+            <div class="project-media">
+              <div class="project-image-placeholder p3-bg"></div>
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project-content">
+              <div class="project-top">
+                <span class="project-number condensed-title">03</span>
+                <span class="project-category mono-label">[ AI / DASHBOARD ]</span>
+              </div>
+              <h3 class="project-title display-font">CYBERNETIC CORE</h3>
+              <p class="project-excerpt">Futuristic AI neural telemetry interface featuring real-time data streaming, interactive topological graphs, and dark mode aesthetics.</p>
+              <div class="project-tech-stack mono-label">
+                <span>React</span>
+                <span>D3.js</span>
+                <span>Canvas API</span>
+                <span>Node.js</span>
+              </div>
+              <div class="project-action">
+                <button class="btn-link" data-open-modal="p3">
+                  <span>EXPLORE PROJECT</span>
+                  <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 04 -->
+          <article class="project-card glass-panel" data-project-id="p4" data-accent="emerald-cyan" data-cursor="VIEW">
+            <div class="project-media">
+              <div class="project-image-placeholder p4-bg"></div>
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project-content">
+              <div class="project-top">
+                <span class="project-number condensed-title">04</span>
+                <span class="project-category mono-label">[ EXPERIMENTAL / AUDIO ]</span>
+              </div>
+              <h3 class="project-title display-font">QUANTUM AUDIO VISUALIZER</h3>
+              <p class="project-excerpt">Algorithmic soundscape generator mapping pitch, spectrum, and timbre into reactive mathematical geometry.</p>
+              <div class="project-tech-stack mono-label">
+                <span>Vanilla JS</span>
+                <span>WebAudio</span>
+                <span>Canvas 2D</span>
+                <span>SVG Animation</span>
+              </div>
+              <div class="project-action">
+                <button class="btn-link" data-open-modal="p4">
+                  <span>EXPLORE PROJECT</span>
+                  <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE TIMELINE SECTION -->
+    <section id="experience" class="experience-section" data-theme="experience">
+      <div class="section-wrapper">
+        <div class="section-header">
+          <span class="section-num mono-label">04 // CHRONOLOGY</span>
+          <h2 class="section-title display-font">PROFESSIONAL <span class="serif-text italic-text">JOURNEY</span></h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-line">
+            <div class="timeline-progress"></div>
+          </div>
+
+          <!-- EVENT 1 -->
+          <div class="timeline-item glass-panel">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header">
+              <span class="timeline-year condensed-title">2030 — PRESENT</span>
+              <span class="timeline-company mono-label">[ MONOLITH STUDIOS ]</span>
+            </div>
+            <h3 class="timeline-role display-font">Lead Creative Developer</h3>
+            <p class="timeline-desc">Architecting bespoke web applications for global luxury brands. Leading motion design guidelines, custom WebGL graphics engines, and performance auditing for tier-1 launches.</p>
+          </div>
+
+          <!-- EVENT 2 -->
+          <div class="timeline-item glass-panel">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header">
+              <span class="timeline-year condensed-title">2026 — 2030</span>
+              <span class="timeline-company mono-label">[ SYNTHETIC INTERACTION LABS ]</span>
+            </div>
+            <h3 class="timeline-role display-font">Senior Frontend Engineer</h3>
+            <p class="timeline-desc">Engineered interactive real-time dashboards and WebGL experiences. Reduced application bundle sizes by 42% while implementing complex canvas animations and micro-interactions.</p>
+          </div>
+
+          <!-- EVENT 3 -->
+          <div class="timeline-item glass-panel">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header">
+              <span class="timeline-year condensed-title">2025 — 2026</span>
+              <span class="timeline-company mono-label">[ NEXUS DIGITAL MEDIA ]</span>
+            </div>
+            <h3 class="timeline-role display-font">Interactive UI Developer</h3>
+            <p class="timeline-desc">Designed responsive web applications, created custom SVG animation libraries, and collaborated closely with art directors to ship award-winning marketing sites.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section" data-theme="contact">
+      <div class="section-wrapper contact-wrapper">
+        <div class="contact-header">
+          <span class="section-num mono-label">[ INITIATE CONTACT ]</span>
+          <h2 class="contact-headline">
+            <span class="display-font">LET'S BUILD</span>
+            <br />
+            <span class="serif-text italic-text highlight-gold">SOMETHING</span>
+            <br />
+            <span class="display-font gradient-text-gold">EXTRAORDINARY.</span>
+          </h2>
+        </div>
+
+        <p class="contact-subtext standard-body">
+          Currently open for select freelance commissions, architectural consultations, or full-time creative engineering opportunities.
+        </p>
+
+        <div class="contact-actions">
+          <a href="mailto:Srishanth.dev@example.com" class="btn btn-primary btn-large" data-magnetic>
+            <span class="btn-text">Srishanth.dev@example.com</span>
+            <span class="btn-glow"></span>
+          </a>
+        </div>
+
+        <div class="social-grid">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link glass-panel" data-magnetic>
+            <span class="mono-label">01 //</span>
+            <span class="social-name">GITHUB</span>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link glass-panel" data-magnetic>
+            <span class="mono-label">02 //</span>
+            <span class="social-name">LINKEDIN</span>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link glass-panel" data-magnetic>
+            <span class="mono-label">03 //</span>
+            <span class="social-name">X (TWITTER)</span>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link glass-panel" data-magnetic>
+            <span class="mono-label">04 //</span>
+            <span class="social-name">INSTAGRAM</span>
+          </a>
+        </div>
+
+        <footer class="site-footer">
+          <div class="footer-left">
+            <span class="mono-label">© 2026 DASARI SRISHANTH. ALL RIGHTS RESERVED.</span>
+          </div>
+          <div class="footer-right">
+            <span class="mono-label">DESIGNED &amp; BUILT WITH CINEMATIC PRECISION</span>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =================================================================== -->
+  <!-- PROJECT DETAIL MODAL (DYNAMICALLY POPULATED)                        -->
+  <!-- =================================================================== -->
+  <div id="project-modal" class="project-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-container glass-panel">
+      <button class="modal-close" aria-label="Close project modal" data-magnetic>&times;</button>
+      <div class="modal-scroll-content">
+        <div class="modal-header-media">
+          <div id="modal-media-bg" class="modal-media-bg"></div>
+        </div>
+        <div class="modal-body">
+          <span id="modal-project-num" class="condensed-title modal-num">01</span>
+          <h2 id="modal-project-title" class="display-font modal-title">PROJECT TITLE</h2>
+          <div id="modal-tech-list" class="modal-tech mono-label"></div>
+          <div id="modal-description" class="modal-text standard-body"></div>
+          
+          <div class="modal-features-section">
+            <h4 class="mono-label modal-subheading">KEY ARCHITECTURAL HIGHLIGHTS</h4>
+            <ul id="modal-features-list" class="modal-features"></ul>
+          </div>
+
+          <div class="modal-actions">
+            <a id="modal-live-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-magnetic>
+              <span>LAUNCH LIVE DEMO</span>
+              <span class="btn-glow"></span>
+            </a>
+            <a id="modal-github-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-magnetic>
+              <span>VIEW SOURCE CODE</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
